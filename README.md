@@ -23,8 +23,13 @@ Prima della pubblicazione:
 
 Gli URL hanno la forma `https://inzona.netlify.app/post/ID`.
 
-- `post.html` + `post.js` — pagina di atterraggio: prova ad aprire l'app, altrimenti invita a scaricarla
-- `_redirects` — rewrite Netlify `/post/*` → `post.html`
+- `netlify/functions/post-preview.js` — pagina dinamica con anteprima (thumbnail/video) e meta Open Graph per WhatsApp, iMessage, ecc.
+- `netlify.toml` — rewrite `/post/:id` → function (configurato nella root del repo)
+- `post.html` + `post.js` — fallback statico per anteprima locale (`npx serve website` non esegue le function)
+
+**Variabile Netlify (Site settings → Environment variables):**
+
+- `FIREBASE_API_KEY` — stessa chiave di `EXPO_PUBLIC_FIREBASE_API_KEY` nel progetto app (Firestore read pubblico)
 - `.well-known/apple-app-site-association` — Universal Links iOS (sostituisci `TEAMID`)
 - `.well-known/assetlinks.json` — App Links Android (sostituisci l'impronta SHA256 del keystore)
 
