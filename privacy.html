@@ -25,6 +25,7 @@
       </a>
       <nav class="nav-desktop" aria-label="Legale">
         <a href="index.html">Home</a>
+        <a href="help.html">Aiuto</a>
         <a href="privacy.html" aria-current="page">Privacy</a>
         <a href="termini.html">Termini</a>
       </nav>
@@ -36,7 +37,7 @@
         <header class="legal-doc-head">
           <p class="section-label">Legale</p>
           <h1>Informativa sulla privacy</h1>
-          <p class="legal-updated">Ultimo aggiornamento: 3 giugno 2026</p>
+          <p class="legal-updated">Ultimo aggiornamento: 4 giugno 2026</p>
         </header>
 
         <p>
@@ -47,26 +48,36 @@
 
         <h2>1. Titolare del trattamento</h2>
         <p>
-          Il titolare del trattamento è il gestore del servizio <strong>InZona</strong>. Per esercitare i tuoi diritti
-          o per qualsiasi richiesta relativa alla privacy puoi scrivere a
-          <a href="mailto:savoa22@gmail.com">savoa22@gmail.com</a>.
+          Il titolare del trattamento è <strong>Claudio Savoldelli</strong>, gestore del servizio
+          <strong>InZona</strong>, con sede in <strong>Via Armando Diaz, 25030 Comezzano-Cizzago (BS), Italia</strong>.
+          Per esercitare i tuoi diritti o per
+          qualsiasi richiesta relativa alla privacy puoi scrivere a
+          <a href="mailto:savoa22@gmail.com">savoa22@gmail.com</a> (oggetto consigliato: «Privacy — InZona»).
         </p>
 
         <h2>2. Ambito di applicazione</h2>
         <p>Questa informativa si applica a:</p>
         <ul>
           <li>l'app InZona per iOS e Android;</li>
-          <li>il sito web promozionale InZona (pagine informative e legali).</li>
+          <li>
+            il sito web InZona (landing, pagine legali, pagina
+            <a href="help.html">Aiuto e supporto</a> con modulo contatti).
+          </li>
         </ul>
         <p>
-          Il sito web, nella versione attuale, non utilizza moduli di contatto propri: per messaggi dall'app si usa la
-          sezione «Contattaci», che invia i dati ai nostri sistemi backend.
+          I messaggi di assistenza possono essere inviati dall'app (sezione «Contattaci») o dal sito (modulo su
+          <a href="help.html">help.html</a>): in entrambi i casi i dati vengono salvati sui nostri sistemi backend
+          (Firebase).
         </p>
 
         <h2>3. Tipologie di dati trattati</h2>
 
         <h3>3.1 Dati forniti dall'utente</h3>
         <ul>
+          <li>
+            <strong>Accesso (Apple / Google):</strong> identificativo account, eventuale nome, cognome, email e foto
+            profilo forniti dal provider scelto, ove disponibili e condivisi da te con il provider.
+          </li>
           <li><strong>Profilo:</strong> nome, cognome, eventuale foto profilo, provincia di riferimento per il feed.</li>
           <li>
             <strong>Posizione e zona:</strong> coordinate della «casa» o zona di riferimento, etichetta luogo (es. da
@@ -78,7 +89,8 @@
           </li>
           <li><strong>Segnalazioni abusive:</strong> motivo della segnalazione, eventuale nota, identificativo del post.</li>
           <li>
-            <strong>Contatti:</strong> nome, email e messaggio inviati tramite la schermata «Contattaci» nell'app.
+            <strong>Contatti:</strong> nome, email e messaggio inviati tramite la schermata «Contattaci» nell'app o il
+            modulo sul sito (<a href="help.html">Aiuto</a>).
           </li>
           <li><strong>Email facoltativa</strong> se inserita nel profilo o nei messaggi di contatto.</li>
         </ul>
@@ -86,8 +98,13 @@
         <h3>3.2 Dati generati automaticamente</h3>
         <ul>
           <li>
-            <strong>Identificativo tecnico:</strong> UID Firebase (autenticazione anonima), data di creazione/aggiornamento
-            profilo.
+            <strong>Identificativo tecnico:</strong> UID Firebase (account collegato ad Apple Sign-In o Google Sign-In),
+            data di creazione/aggiornamento profilo.
+          </li>
+          <li>
+            <strong>Statistiche di utilizzo (Analytics):</strong> dati aggregati o pseudonimizzati su aperture app,
+            schermate visitate e sessioni, tramite Firebase Analytics / Google Analytics, per misurare l'uso del Servizio
+            (es. utenti attivi). Su iOS non utilizziamo l'identificatore pubblicitario (IDFA).
           </li>
           <li><strong>Punti e classifica:</strong> punteggio derivante da pubblicazioni e condivisioni.</li>
           <li>
@@ -108,9 +125,11 @@
 
         <h3>3.4 Dati del sito web</h3>
         <p>
-          La visita alle pagine statiche del sito può comportare il trattamento di dati tecnici (es. indirizzo IP, log
-          del provider di hosting) da parte dell'infrastruttura che ospita il sito. Non utilizziamo cookie di profilazione
-          o analytics di terze parti sulla landing page, salvo eventuali cookie tecnici del provider di hosting.
+          La visita alle pagine del sito può comportare il trattamento di dati tecnici (es. indirizzo IP, log del
+          provider di hosting) da parte dell'infrastruttura che ospita il sito (es. Netlify). Il modulo contatti su
+          <a href="help.html">help.html</a> invia nome, email e messaggio a Firebase come descritto sopra. Non
+          utilizziamo cookie di profilazione o banner cookie sulla landing page, salvo eventuali cookie tecnici del
+          provider di hosting.
         </p>
 
         <h2>4. Finalità e basi giuridiche</h2>
@@ -144,8 +163,16 @@
                 <td>Legittimo interesse e obblighi di legge</td>
               </tr>
               <tr>
-                <td>Assistenza tramite form contatti</td>
+                <td>Autenticazione con Apple / Google</td>
+                <td>Esecuzione del contratto (art. 6.1.b GDPR)</td>
+              </tr>
+              <tr>
+                <td>Assistenza tramite form contatti (app e sito)</td>
                 <td>Esecuzione del contratto / legittimo interesse</td>
+              </tr>
+              <tr>
+                <td>Statistiche di utilizzo (Firebase Analytics)</td>
+                <td>Legittimo interesse (miglioramento del Servizio) e/o consenso ove richiesto</td>
               </tr>
               <tr>
                 <td>Sicurezza, prevenzione abusi, backup</td>
@@ -159,19 +186,22 @@
         <p>I dati possono essere trattati da:</p>
         <ul>
           <li>
-            <strong>Google Firebase</strong> (Authentication, Firestore, Cloud Storage, Cloud Functions) — hosting dati
-            e infrastruttura backend, in base ai
+            <strong>Google Firebase</strong> (Authentication, Firestore, Cloud Storage, Cloud Functions, Analytics) —
+            hosting dati e infrastruttura backend, in base ai
             <a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer" target="_blank"
               >termini Google/Firebase</a
             >.
+          </li>
+          <li>
+            <strong>Apple</strong> (Sign in with Apple, App Store) e <strong>Google</strong> (Sign-In, Play Store) —
+            autenticazione e distribuzione app, secondo le rispettive informative privacy.
           </li>
           <li>
             <strong>Expo / servizi push</strong> — recapito notifiche, secondo le policy del fornitore utilizzato in
             produzione.
           </li>
           <li>
-            <strong>Apple e Google</strong> — per distribuzione app, pagamenti (se in futuro previsti) e permessi di
-            sistema; come titolari autonomi per i rispettivi store.
+            <strong>Netlify</strong> (o equivalente) — hosting del sito web e log tecnici di accesso.
           </li>
           <li>
             <strong>Altri utenti dell'app</strong> — nome, foto, post, posizione approssimativa degli eventi e punteggio
@@ -190,15 +220,16 @@
         <h2>7. Periodo di conservazione</h2>
         <ul>
           <li>
-            <strong>Profilo e post:</strong> fino a cancellazione da parte dell'utente o del gestore, o fino a cessazione
-            del Servizio.
+            <strong>Profilo e post:</strong> fino a cancellazione da parte dell'utente (funzione «Elimina account» in
+            Impostazioni) o del gestore, o fino a cessazione del Servizio.
           </li>
           <li>
-            <strong>Account anonimo:</strong> l'identificativo è legato al dispositivo/installazione; la disinstallazione
-            dell'app può comportare la perdita dell'accesso al profilo esistente (auth anonima).
+            <strong>Account Apple / Google:</strong> l'accesso è collegato al provider scelto; puoi uscire o eliminare
+            l'account dall'app. L'eliminazione rimuove profilo, post, media e dati collegati sul nostro backend.
           </li>
           <li><strong>Segnalazioni (report):</strong> per il tempo necessario alla moderazione e agli obblighi di legge.</li>
           <li><strong>Messaggi contatti:</strong> per il tempo necessario a gestire la richiesta, di norma non oltre 24 mesi.</li>
+          <li><strong>Analytics:</strong> secondo i periodi di conservazione configurati su Firebase/Google (in genere in forma aggregata).</li>
           <li><strong>Log tecnici hosting:</strong> secondo i termini del provider (in genere pochi mesi).</li>
         </ul>
 
@@ -215,7 +246,14 @@
           <li>accesso, rettifica, cancellazione;</li>
           <li>limitazione del trattamento e opposizione, nei casi previsti;</li>
           <li>portabilità dei dati forniti, ove applicabile;</li>
-          <li>revocare il consenso (es. notifiche o posizione) dalle impostazioni del dispositivo o dell'app;</li>
+          <li>
+            revocare il consenso (es. notifiche o posizione) dalle impostazioni del dispositivo o dell'app; limitare
+            l'analytics tramite le impostazioni privacy del sistema operativo ove disponibili;
+          </li>
+          <li>
+            <strong>eliminare l'account</strong> dall'app (Impostazioni → Elimina account), con rimozione dei dati
+            associati salvo obblighi di legge;
+          </li>
           <li>proporre reclamo al <strong>Garante per la protezione dei dati personali</strong> (www.garanteprivacy.it).</li>
         </ul>
         <p>
@@ -245,6 +283,7 @@
     <footer class="site-footer legal-footer">
       <p class="copyright">
         © <span id="year"></span> InZona —
+        <a href="help.html">Aiuto</a> ·
         <a href="privacy.html">Privacy</a> ·
         <a href="termini.html">Termini</a> ·
         <a href="mailto:savoa22@gmail.com">savoa22@gmail.com</a>

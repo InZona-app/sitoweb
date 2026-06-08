@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Aiuto e supporto InZona: domande frequenti e modulo contatti." />
+    <meta name="theme-color" content="#000000" />
+    <title>Aiuto e supporto — InZona</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="legal-body">
+    <div class="bg-glow" aria-hidden="true"></div>
+
+    <header class="site-header legal-header scrolled">
+      <a class="logo" href="index.html">
+        <img src="assets/icon.png" alt="" width="36" height="36" />
+        <span>InZona</span>
+      </a>
+      <nav class="nav-desktop" aria-label="Principale">
+        <a href="index.html">Home</a>
+        <a href="help.html" aria-current="page">Aiuto</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="termini.html">Termini</a>
+      </nav>
+      <a class="btn btn-sm header-cta" href="index.html#scarica">Scarica l'app</a>
+    </header>
+
+    <main class="legal-main help-main">
+      <article class="legal-doc">
+        <header class="legal-doc-head">
+          <p class="section-label">Supporto</p>
+          <h1>Aiuto e contatti</h1>
+          <p class="legal-updated">Risposte rapide alle domande più comuni e modulo per scriverci.</p>
+        </header>
+
+        <section class="help-faq" aria-labelledby="faq-title">
+          <h2 id="faq-title">Domande frequenti</h2>
+
+          <h3>Come funziona il feed?</h3>
+          <p>
+            Il feed mostra le segnalazioni della <strong>provincia</strong> che hai scelto in onboarding o nelle
+            impostazioni, ordinate per vicinanza e data. Non vedi solo i tuoi post: vedi tutto ciò che è stato
+            pubblicato nella tua area.
+          </p>
+
+          <h3>Come imposto le notifiche?</h3>
+          <p>
+            Durante l'onboarding (o dal feed) scegli un <strong>raggio da 1 a 15 km</strong>. Riceverai un avviso
+            push quando qualcuno pubblica una nuova segnalazione entro quel raggio dalla tua posizione.
+          </p>
+
+          <h3>Come pubblico una segnalazione?</h3>
+          <p>
+            Vai su <strong>Pubblica</strong>, scegli la categoria, allega foto o video (obbligatorio), aggiungi
+            descrizione e luogo, poi conferma. Ogni post valido ti fa guadagnare <strong>+5 punti</strong>.
+          </p>
+
+          <h3>Non vedo post o non ricevo notifiche</h3>
+          <p>
+            Verifica che l'app abbia il permesso <strong>posizione</strong> e <strong>notifiche</strong> attivi,
+            che la provincia sia corretta e che il raggio non sia troppo basso. Prova a tirare giù il feed per
+            aggiornarlo.
+          </p>
+
+          <h3>Come segnalo un post inappropriato?</h3>
+          <p>
+            Su ogni scheda nel feed trovi l'icona <strong>bandierina</strong> in basso a destra. L'admin riceve la
+            segnalazione e può intervenire.
+          </p>
+
+          <h3>Account, login e cancellazione</h3>
+          <p>
+            Puoi accedere con Apple o Google. Dalle <strong>Impostazioni</strong> puoi uscire o eliminare
+            definitivamente l'account (post, dati e profilo vengono rimossi).
+          </p>
+        </section>
+
+        <section class="help-contact" id="contatti" aria-labelledby="contact-title">
+          <h2 id="contact-title">Scrivici</h2>
+          <p>
+            Non hai trovato risposta? Compila il modulo — è lo stesso dell'app. Ti rispondiamo all'email che
+            indichi.
+          </p>
+
+          <div class="contact-card">
+            <div class="contact-card-head">
+              <div class="contact-card-icon" aria-hidden="true">✉</div>
+              <div>
+                <p class="contact-card-label">Email diretta</p>
+                <a class="contact-card-email" href="mailto:savoa22@gmail.com">savoa22@gmail.com</a>
+              </div>
+            </div>
+            <p class="contact-card-note">Oppure usa il modulo qui sotto.</p>
+          </div>
+
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-field">
+              <label for="contact-nome">Nome</label>
+              <input
+                id="contact-nome"
+                name="nome"
+                type="text"
+                autocomplete="name"
+                maxlength="80"
+                required
+                placeholder="Il tuo nome"
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="contact-email">Email</label>
+              <input
+                id="contact-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                maxlength="200"
+                required
+                placeholder="nome@esempio.it"
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="contact-messaggio">Messaggio</label>
+              <textarea
+                id="contact-messaggio"
+                name="messaggio"
+                rows="5"
+                maxlength="2000"
+                required
+                placeholder="Come possiamo aiutarti?"
+              ></textarea>
+            </div>
+
+            <p id="contact-form-error" class="form-message form-message-error hidden" role="alert"></p>
+            <p id="contact-form-success" class="form-message form-message-success hidden" role="status"></p>
+
+            <button type="submit" class="btn contact-submit" id="contact-submit">
+              Invia messaggio
+            </button>
+          </form>
+        </section>
+
+        <nav class="legal-nav-bottom" aria-label="Altre pagine">
+          <a href="index.html">← Torna alla home</a>
+          <a href="privacy.html">Privacy Policy →</a>
+        </nav>
+      </article>
+    </main>
+
+    <footer class="site-footer legal-footer">
+      <p class="copyright">
+        © <span id="year"></span> InZona —
+        <a href="privacy.html">Privacy</a> ·
+        <a href="termini.html">Termini</a> ·
+        <a href="help.html">Aiuto</a>
+      </p>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="main.js"></script>
+    <script src="help.js"></script>
+  </body>
+</html>

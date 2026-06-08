@@ -1096,3 +1096,139 @@ main {
 .legal-footer .copyright a:hover {
   color: var(--primary-light);
 }
+
+/* Help & contact form */
+.help-main .help-faq {
+  margin-bottom: 3rem;
+}
+
+.help-contact h2 {
+  margin-top: 0;
+}
+
+.contact-card {
+  margin: 1.5rem 0 2rem;
+  padding: 1.25rem 1.35rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border);
+  background: var(--card);
+}
+
+.contact-card-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-card-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  background: var(--primary-soft);
+  border: 1px solid var(--primary-border);
+}
+
+.contact-card-label {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 0.15rem;
+}
+
+.contact-card-email {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-light);
+  text-decoration: none;
+}
+
+.contact-card-email:hover {
+  color: var(--text);
+}
+
+.contact-card-note {
+  margin: 1rem 0 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.15rem;
+}
+
+.form-field label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.45rem;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 0.85rem 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: #6b7280;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--primary-border);
+  box-shadow: 0 0 0 3px rgba(47, 79, 79, 0.35);
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 8rem;
+  line-height: 1.55;
+}
+
+.contact-submit {
+  justify-self: start;
+  margin-top: 0.25rem;
+  min-width: 12rem;
+}
+
+.contact-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.form-message {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-md);
+}
+
+.form-message.hidden {
+  display: none;
+}
+
+.form-message-error {
+  color: #fecaca;
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+}
+
+.form-message-success {
+  color: #bbf7d0;
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.35);
+}

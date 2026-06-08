@@ -5,14 +5,14 @@ Landing page statica con gli stessi colori dell'app (`#2F4F4F`, nero, card `#141
 ## Anteprima locale
 
 ```bash
-npx serve website
+npx serve .
 ```
 
 Apri l'URL indicato (di solito http://localhost:3000).
 
 ## Deploy
 
-Carica la cartella `website/` su qualsiasi hosting statico (Firebase Hosting, Netlify, Vercel, GitHub Pages).
+Carica la root del repo su qualsiasi hosting statico (Firebase Hosting, Netlify, Vercel, GitHub Pages).
 
 Prima della pubblicazione:
 
@@ -24,8 +24,8 @@ Prima della pubblicazione:
 Gli URL hanno la forma `https://inzona.netlify.app/post/ID`.
 
 - `netlify/functions/post-preview.js` — pagina dinamica con anteprima (thumbnail/video) e meta Open Graph per WhatsApp, iMessage, ecc.
-- `netlify.toml` — rewrite `/post/:id` → function (configurato nella root del repo)
-- `post.html` + `post.js` — fallback statico per anteprima locale (`npx serve website` non esegue le function)
+- `netlify.toml` — rewrite `/post/:id` → function
+- `post.html` + `post.js` — fallback statico per anteprima locale (`npx serve .` non esegue le function)
 
 **Variabile Netlify (Site settings → Environment variables):**
 
@@ -39,8 +39,10 @@ Dopo il deploy, verifica che `https://inzona.netlify.app/.well-known/apple-app-s
 
 - `index.html` — landing page
 - `post.html` — link condivisi segnalazioni
+- `help.html` — aiuto, FAQ e modulo contatti (stessa collection Firestore `contacts` dell'app)
 - `privacy.html` — informativa sulla privacy (GDPR)
 - `termini.html` — termini e condizioni d'uso
+- `firebase-config.js` — chiavi Firebase per il modulo contatti sul sito (vedi `firebase-config.example.js`)
 - `styles.css` — tema allineato a `constants/theme.ts`
 - `main.js` — menu mobile e animazioni scroll
 - `assets/` — icona e favicon dell'app
