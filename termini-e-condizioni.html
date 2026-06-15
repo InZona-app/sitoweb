@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Termini e condizioni d'uso — InZona</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --page-max-width: 1140px;
+      --page-gutter: 64px;
+      --text-primary: #111111;
+      --text-secondary: rgb(109, 109, 109);
+      --text-muted: rgb(153, 153, 153);
+      --accent: #2F4F4F;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f4f6f6;
+      color: var(--text-primary);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    .page-bg {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background-color: #eef0f0;
+      background-image:
+        linear-gradient(180deg, rgba(248, 250, 252, 0.92) 0%, rgba(255, 255, 255, 0.88) 42%, rgba(255, 255, 255, 0.96) 76%, #ffffff 100%),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.82) 35%, rgba(255, 255, 255, 0.5) 58%, rgba(255, 255, 255, 0.15) 100%),
+        url("https://images.unsplash.com/photo-1516589589049-c1339eb9fcb4?auto=format&fit=crop&w=2400&q=80");
+      background-size: cover;
+      background-position: left bottom;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    .page-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      max-width: var(--page-max-width);
+      margin: 0 auto;
+      padding: 28px var(--page-gutter);
+      min-height: 80px;
+    }
+
+    .nav-logo {
+      flex-shrink: 0;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .nav-logo p {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px 20px;
+    }
+
+    .nav-link {
+      font-size: 15px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link[aria-current="page"] {
+      color: var(--accent);
+    }
+
+    .nav-link[aria-current="page"] {
+      font-weight: 500;
+      text-decoration: underline;
+    }
+
+    .legal-nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid rgb(238, 238, 238);
+    }
+
+    .legal-nav-links a {
+      font-size: 15px;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .legal-nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    .legal-main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 24px var(--page-gutter) 80px;
+    }
+
+    .legal-header {
+      margin-bottom: 48px;
+    }
+
+    .legal-header h1 {
+      font-size: clamp(32px, 4vw, 44px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .legal-meta {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .legal-intro {
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+
+    .legal-content h2 {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin: 40px 0 12px;
+      color: var(--text-primary);
+    }
+
+    .legal-content h2:first-child {
+      margin-top: 0;
+    }
+
+    .legal-content p,
+    .legal-content li {
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--text-secondary);
+      letter-spacing: -0.01em;
+    }
+
+    .legal-content p {
+      margin-bottom: 16px;
+    }
+
+    .legal-content ul,
+    .legal-content ol {
+      margin: 0 0 16px 24px;
+    }
+
+    .legal-content li {
+      margin-bottom: 8px;
+    }
+
+    .legal-content a {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      :root {
+        --page-gutter: 24px;
+      }
+
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px var(--page-gutter);
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true"></div>
+  <div class="page-content">
+    <nav>
+      <div class="nav-container">
+        <a class="nav-logo" href="./">
+          <p>InZona</p>
+        </a>
+        <div class="nav-links">
+          <a class="nav-link" href="./">Home</a>
+          <a class="nav-link" href="./termini-e-condizioni.html" aria-current="page">Termini</a>
+          <a class="nav-link" href="./privacy-policy.html">Privacy</a>
+          <a class="nav-link" href="mailto:supporto@appinzona.com">Contattaci</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="legal-main">
+      <header class="legal-header">
+        <h1>Termini e condizioni d'uso</h1>
+        <p class="legal-meta">Ultimo aggiornamento: 14 giugno 2026</p>
+      </header>
+
+      <div class="legal-content">
+        <h2>1. Introduzione</h2>
+        <p>
+          I presenti Termini e Condizioni ("Termini") regolano l'accesso e l'utilizzo dell'applicazione mobile
+          <strong>InZona</strong> e del sito web correlato (collettivamente, il "Servizio"), forniti da
+          <strong>App In Zona</strong> ("noi", "ci" o "Titolare").
+        </p>
+        <p>
+          Utilizzando il Servizio, l'utente ("Utente" o "tu") accetta integralmente i presenti Termini.
+          Se non accetti questi Termini, ti preghiamo di non utilizzare il Servizio.
+        </p>
+
+        <h2>2. Descrizione del Servizio</h2>
+        <p>
+          InZona è un'applicazione che consente di visualizzare e condividere segnalazioni locali in tempo reale,
+          incluse foto, video e notifiche personalizzate relative a eventi e situazioni nelle vicinanze dell'Utente.
+        </p>
+        <p>
+          Il Servizio ha finalità informative e di condivisione tra utenti. Non sostituisce servizi di emergenza,
+          assistenza sanitaria, forze dell'ordine o altre fonti ufficiali di informazione.
+        </p>
+
+        <h2>3. Requisiti e registrazione</h2>
+        <p>
+          Per utilizzare alcune funzionalità del Servizio potrebbe essere necessario creare un account.
+          L'Utente si impegna a fornire informazioni accurate, complete e aggiornate e a mantenere riservate
+          le proprie credenziali di accesso.
+        </p>
+        <p>
+          L'Utente deve avere almeno 16 anni per utilizzare il Servizio. Se hai meno di 18 anni,
+          devi utilizzare il Servizio con il consenso di un genitore o tutore legale.
+        </p>
+
+        <h2>4. Contenuti generati dagli utenti</h2>
+        <p>
+          Pubblicando segnalazioni, foto, video, commenti o altri contenuti ("Contenuti Utente"),
+          l'Utente dichiara di possedere i diritti necessari per condividerli e di non violare diritti
+          di terzi, norme vigenti o i presenti Termini.
+        </p>
+        <p>È vietato pubblicare Contenuti Utente che:</p>
+        <ul>
+          <li>siano falsi, fuorvianti, diffamatori o offensivi;</li>
+          <li>incitino alla violenza, all'odio o a comportamenti illegali;</li>
+          <li>violino la privacy, l'immagine o altri diritti di terzi;</li>
+          <li>contengano materiale protetto da copyright senza autorizzazione;</li>
+          <li>promuovano attività fraudolente, spam o contenuti commerciali non autorizzati.</li>
+        </ul>
+        <p>
+          Ci riserviamo il diritto, a nostra discrezione, di rimuovere qualsiasi Contenuto Utente
+          e di sospendere o chiudere account che violino i presenti Termini, senza preavviso.
+        </p>
+
+        <h2>5. Licenza sui Contenuti Utente</h2>
+        <p>
+          Pubblicando Contenuti Utente sul Servizio, l'Utente concede al Titolare una licenza non esclusiva,
+          mondiale, gratuita e trasferibile per utilizzare, riprodurre, distribuire, visualizzare e adattare
+          tali contenuti al fine di fornire, promuovere e migliorare il Servizio, nel rispetto della
+          <a href="./privacy-policy.html">informativa sulla privacy</a>.
+        </p>
+        <p>
+          L'Utente mantiene la titolarità dei propri Contenuti Utente e può richiederne la rimozione,
+          salvo obblighi di conservazione previsti dalla legge.
+        </p>
+
+        <h2>6. Proprietà intellettuale</h2>
+        <p>
+          Il Servizio, inclusi marchi, loghi, software, design, testi e grafica (esclusi i Contenuti Utente),
+          è di proprietà del Titolare o dei suoi licenzianti ed è protetto dalle leggi applicabili
+          in materia di proprietà intellettuale.
+        </p>
+        <p>
+          È vietato copiare, modificare, distribuire, decompilare o sfruttare commercialmente il Servizio
+          senza il nostro consenso scritto, salvo quanto consentito dalla legge.
+        </p>
+
+        <h2>7. Posizione e notifiche</h2>
+        <p>
+          Alcune funzionalità del Servizio richiedono l'accesso alla posizione del dispositivo e l'invio
+          di notifiche push. L'Utente può gestire tali permessi dalle impostazioni del dispositivo o dell'app.
+          La disattivazione di tali permessi potrebbe limitare alcune funzionalità.
+        </p>
+
+        <h2>8. Limitazione di responsabilità</h2>
+        <p>
+          Il Servizio è fornito "così com'è" e "come disponibile". Non garantiamo che le segnalazioni
+          siano accurate, complete o aggiornate, poiché provengono principalmente da altri utenti.
+        </p>
+        <p>
+          Nei limiti consentiti dalla legge applicabile, il Titolare non sarà responsabile per danni diretti,
+          indiretti, incidentali o consequenziali derivanti dall'uso o dall'impossibilità di usare il Servizio,
+          inclusa la fiducia riposta nelle segnalazioni pubblicate dagli utenti.
+        </p>
+        <p>
+          L'Utente è l'unico responsabile delle proprie decisioni e azioni basate sulle informazioni
+          ricevute tramite il Servizio.
+        </p>
+
+        <h2>9. Indennizzo</h2>
+        <p>
+          L'Utente si impegna a manlevare e tenere indenne il Titolare da qualsiasi reclamo, danno,
+          responsabilità o spesa (incluse le spese legali) derivanti dalla violazione dei presenti Termini
+          o dalla pubblicazione di Contenuti Utente illeciti o non autorizzati.
+        </p>
+
+        <h2>10. Modifiche al Servizio e ai Termini</h2>
+        <p>
+          Possiamo modificare, sospendere o interrompere il Servizio, in tutto o in parte, in qualsiasi momento.
+          Possiamo aggiornare i presenti Termini pubblicando una versione revisionata su questa pagina.
+          L'uso continuato del Servizio dopo le modifiche costituisce accettazione dei Termini aggiornati.
+        </p>
+
+        <h2>11. Risoluzione</h2>
+        <p>
+          L'Utente può cessare l'utilizzo del Servizio in qualsiasi momento eliminando l'account
+          o disinstallando l'applicazione. Possiamo sospendere o terminare l'accesso al Servizio
+          in caso di violazione dei presenti Termini o per motivi legittimi di sicurezza o conformità.
+        </p>
+
+        <h2>12. Legge applicabile e foro competente</h2>
+        <p>
+          I presenti Termini sono regolati dalla legge italiana. Per qualsiasi controversia relativa
+          al Servizio, sarà competente il foro del domicilio o della residenza dell'Utente consumatore,
+          ove previsto dalla normativa a tutela dei consumatori.
+        </p>
+
+        <h2>13. Contatti</h2>
+        <p>
+          Per domande relative ai presenti Termini, puoi contattarci a:
+          <a href="mailto:supporto@appinzona.com">supporto@appinzona.com</a>
+        </p>
+
+        <nav class="legal-nav-links" aria-label="Collegamenti legali">
+          <a href="./privacy-policy.html">Informativa sulla privacy →</a>
+          <a href="./">← Torna alla home</a>
+        </nav>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="footer-contact">
+            <div>
+              <h4>Contattaci a</h4>
+              <h4><a href="mailto:supporto@appinzona.com">supporto@appinzona.com</a></h4>
+            </div>
+            <p class="footer-credit">Creato da App In Zona</p>
+          </div>
+          <nav class="footer-links">
+            <a href="mailto:supporto@appinzona.com">Contattaci</a>
+            <a href="./termini-e-condizioni.html">Termini e Condizioni</a>
+            <a href="./privacy-policy.html">Informativa sulla Privacy</a>
+          </nav>
+        </div>
+        <div class="footer-divider"></div>
+        <p class="footer-copyright">© 2026 App In Zona. Tutti i diritti riservati.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

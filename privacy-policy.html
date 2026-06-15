@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informativa sulla privacy — InZona</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --page-max-width: 1140px;
+      --page-gutter: 64px;
+      --text-primary: #111111;
+      --text-secondary: rgb(109, 109, 109);
+      --text-muted: rgb(153, 153, 153);
+      --accent: #2F4F4F;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f4f6f6;
+      color: var(--text-primary);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    .page-bg {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background-color: #eef0f0;
+      background-image:
+        linear-gradient(180deg, rgba(248, 250, 252, 0.92) 0%, rgba(255, 255, 255, 0.88) 42%, rgba(255, 255, 255, 0.96) 76%, #ffffff 100%),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.82) 35%, rgba(255, 255, 255, 0.5) 58%, rgba(255, 255, 255, 0.15) 100%),
+        url("https://images.unsplash.com/photo-1516589589049-c1339eb9fcb4?auto=format&fit=crop&w=2400&q=80");
+      background-size: cover;
+      background-position: left bottom;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    .page-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      max-width: var(--page-max-width);
+      margin: 0 auto;
+      padding: 28px var(--page-gutter);
+      min-height: 80px;
+    }
+
+    .nav-logo {
+      flex-shrink: 0;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .nav-logo p {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px 20px;
+    }
+
+    .nav-link {
+      font-size: 15px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link[aria-current="page"] {
+      color: var(--accent);
+    }
+
+    .nav-link[aria-current="page"] {
+      font-weight: 500;
+      text-decoration: underline;
+    }
+
+    .legal-main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 24px var(--page-gutter) 80px;
+    }
+
+    .legal-header {
+      margin-bottom: 48px;
+    }
+
+    .legal-header h1 {
+      font-size: clamp(32px, 4vw, 44px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .legal-meta {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .legal-intro {
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+
+    .legal-content h2 {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin: 40px 0 12px;
+      color: var(--text-primary);
+    }
+
+    .legal-content h3 {
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin: 24px 0 10px;
+      color: var(--text-primary);
+    }
+
+    .legal-content p,
+    .legal-content li {
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--text-secondary);
+      letter-spacing: -0.01em;
+    }
+
+    .legal-content p {
+      margin-bottom: 16px;
+    }
+
+    .legal-content ul,
+    .legal-content ol {
+      margin: 0 0 16px 24px;
+    }
+
+    .legal-content li {
+      margin-bottom: 8px;
+    }
+
+    .legal-content a {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    .legal-table-wrap {
+      overflow-x: auto;
+      margin: 16px 0 24px;
+    }
+
+    .legal-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+    }
+
+    .legal-table th,
+    .legal-table td {
+      padding: 12px 14px;
+      text-align: left;
+      vertical-align: top;
+      border: 1px solid rgb(230, 230, 230);
+      line-height: 1.5;
+      color: var(--text-secondary);
+    }
+
+    .legal-table th {
+      background: rgba(47, 79, 79, 0.06);
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .legal-nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid rgb(238, 238, 238);
+    }
+
+    .legal-nav-links a {
+      font-size: 15px;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .legal-nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      :root {
+        --page-gutter: 24px;
+      }
+
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px var(--page-gutter);
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true"></div>
+  <div class="page-content">
+    <nav>
+      <div class="nav-container">
+        <a class="nav-logo" href="./">
+          <p>InZona</p>
+        </a>
+        <div class="nav-links">
+          <a class="nav-link" href="./">Home</a>
+          <a class="nav-link" href="./termini-e-condizioni.html">Termini</a>
+          <a class="nav-link" href="./privacy-policy.html" aria-current="page">Privacy</a>
+          <a class="nav-link" href="mailto:supporto@appinzona.com">Contattaci</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="legal-main">
+      <header class="legal-header">
+        <h1>Informativa sulla privacy</h1>
+        <p class="legal-meta">Ultimo aggiornamento: 4 giugno 2026</p>
+      </header>
+
+      <div class="legal-content">
+        <p class="legal-intro">
+          La presente informativa descrive come InZona («noi», «il Servizio») tratta i dati personali
+          degli utenti dell'app mobile e dei visitatori del sito web, in conformità al Regolamento (UE) 2016/679
+          («GDPR») e alla normativa italiana applicabile.
+        </p>
+
+        <h2>1. Titolare del trattamento</h2>
+        <p>
+          Il titolare del trattamento è <strong>Claudio Savoldelli</strong>, gestore del servizio InZona,
+          con sede in Via Armando Diaz, 25030 Comezzano-Cizzago (BS), Italia. Per esercitare i tuoi diritti
+          o per qualsiasi richiesta relativa alla privacy puoi scrivere a
+          <a href="mailto:supporto@appinzona.com?subject=Privacy%20%E2%80%94%20InZona">supporto@appinzona.com</a>
+          (oggetto consigliato: «Privacy — InZona»).
+        </p>
+
+        <h2>2. Ambito di applicazione</h2>
+        <p>Questa informativa si applica a:</p>
+        <ul>
+          <li>l'app InZona per iOS e Android;</li>
+          <li>il sito web InZona (landing e pagine legali).</li>
+        </ul>
+        <p>
+          I messaggi di assistenza possono essere inviati dall'app (sezione «Contattaci») o via email a
+          <a href="mailto:supporto@appinzona.com">supporto@appinzona.com</a>.
+        </p>
+
+        <h2>3. Tipologie di dati trattati</h2>
+
+        <h3>3.1 Dati forniti dall'utente</h3>
+        <ul>
+          <li><strong>Accesso (Apple / Google):</strong> identificativo account, eventuale nome, cognome, email e foto profilo forniti dal provider scelto, ove disponibili e condivisi da te con il provider.</li>
+          <li><strong>Profilo:</strong> nome, cognome, eventuale foto profilo, provincia di riferimento per il feed.</li>
+          <li><strong>Posizione e zona:</strong> coordinate della «casa» o zona di riferimento, etichetta luogo (es. da geocoding), raggio notifiche (1–15 km) e, se impostato, raggio feed.</li>
+          <li><strong>Segnalazioni (post):</strong> categoria, descrizione, coordinate e etichetta del luogo dell'evento, foto o video allegati, nome visualizzato dell'autore.</li>
+          <li><strong>Segnalazioni abusive:</strong> motivo della segnalazione, eventuale nota, identificativo del post.</li>
+          <li><strong>Contatti:</strong> nome, email e messaggio inviati tramite la schermata «Contattaci» nell'app o via email di supporto.</li>
+          <li><strong>Email facoltativa</strong> se inserita nel profilo o nei messaggi di contatto.</li>
+        </ul>
+
+        <h3>3.2 Dati generati automaticamente</h3>
+        <ul>
+          <li><strong>Identificativo tecnico:</strong> UID Firebase (account collegato ad Apple Sign-In o Google Sign-In), data di creazione/aggiornamento profilo.</li>
+          <li><strong>Statistiche di utilizzo (Analytics):</strong> dati aggregati o pseudonimizzati su aperture app, schermate visitate e sessioni, tramite Firebase Analytics / Google Analytics, per misurare l'uso del Servizio (es. utenti attivi). Su iOS non utilizziamo l'identificatore pubblicitario (IDFA).</li>
+          <li><strong>Punti e classifica:</strong> punteggio derivante da pubblicazioni e condivisioni.</li>
+          <li><strong>Notifiche push:</strong> token del dispositivo (Expo/FCM) per inviare avvisi nel raggio impostato.</li>
+          <li><strong>Geohash e distanze:</strong> per ordinare il feed per vicinanza.</li>
+          <li><strong>Condivisioni:</strong> registrazione delle condivisioni di un post (per attribuzione punti).</li>
+        </ul>
+
+        <h3>3.3 Dati di localizzazione</h3>
+        <p>
+          L'app richiede il permesso di accesso alla posizione in primo piano per: mostrare segnalazioni vicine,
+          compilare il luogo di un evento, aggiornare la posizione nel feed. La posizione non viene tracciata
+          in background continuo oltre a quanto necessario per le funzioni descritte e i permessi di sistema che concedi.
+        </p>
+
+        <h3>3.4 Dati del sito web</h3>
+        <p>
+          La visita alle pagine del sito può comportare il trattamento di dati tecnici (es. indirizzo IP,
+          log del provider di hosting) da parte dell'infrastruttura che ospita il sito (es. Netlify).
+          Per richieste di assistenza puoi scrivere a
+          <a href="mailto:supporto@appinzona.com">supporto@appinzona.com</a>.
+          Non utilizziamo cookie di profilazione o banner cookie sulla landing page,
+          salvo eventuali cookie tecnici del provider di hosting.
+        </p>
+
+        <h2>4. Finalità e basi giuridiche</h2>
+        <div class="legal-table-wrap">
+          <table class="legal-table">
+            <thead>
+              <tr>
+                <th scope="col">Finalità</th>
+                <th scope="col">Base giuridica</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Erogazione del Servizio (feed, pubblicazione, profilo)</td>
+                <td>Esecuzione del contratto / misure precontrattuali (art. 6.1.b GDPR)</td>
+              </tr>
+              <tr>
+                <td>Notifiche push nel raggio scelto</td>
+                <td>Consenso (art. 6.1.a) e/o esecuzione del contratto</td>
+              </tr>
+              <tr>
+                <td>Geolocalizzazione e ordinamento per distanza</td>
+                <td>Esecuzione del contratto; consenso per i permessi di sistema</td>
+              </tr>
+              <tr>
+                <td>Punti, classifica e condivisioni</td>
+                <td>Esecuzione del contratto; legittimo interesse (funzionalità gamification)</td>
+              </tr>
+              <tr>
+                <td>Gestione segnalazioni di contenuti illeciti/inappropriati</td>
+                <td>Legittimo interesse e obblighi di legge</td>
+              </tr>
+              <tr>
+                <td>Autenticazione con Apple / Google</td>
+                <td>Esecuzione del contratto (art. 6.1.b GDPR)</td>
+              </tr>
+              <tr>
+                <td>Assistenza tramite form contatti (app e sito)</td>
+                <td>Esecuzione del contratto / legittimo interesse</td>
+              </tr>
+              <tr>
+                <td>Statistiche di utilizzo (Firebase Analytics)</td>
+                <td>Legittimo interesse (miglioramento del Servizio) e/o consenso ove richiesto</td>
+              </tr>
+              <tr>
+                <td>Sicurezza, prevenzione abusi, backup</td>
+                <td>Legittimo interesse (art. 6.1.f GDPR)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>5. Con chi condividiamo i dati</h2>
+        <p>I dati possono essere trattati da:</p>
+        <ul>
+          <li><strong>Google Firebase</strong> (Authentication, Firestore, Cloud Storage, Cloud Functions, Analytics) — hosting dati e infrastruttura backend, in base ai termini Google/Firebase.</li>
+          <li><strong>Apple</strong> (Sign in with Apple, App Store) e <strong>Google</strong> (Sign-In, Play Store) — autenticazione e distribuzione app, secondo le rispettive informative privacy.</li>
+          <li><strong>Expo / servizi push</strong> — recapito notifiche, secondo le policy del fornitore utilizzato in produzione.</li>
+          <li><strong>Netlify</strong> (o equivalente) — hosting del sito web e log tecnici di accesso.</li>
+          <li><strong>Altri utenti dell'app</strong> — nome, foto, post, posizione approssimativa degli eventi e punteggio in classifica sono visibili secondo le regole del Servizio (feed pubblico per provincia/area).</li>
+        </ul>
+        <p>Non vendiamo i tuoi dati personali a terzi.</p>
+
+        <h2>6. Luogo del trattamento e trasferimenti</h2>
+        <p>
+          I dati sono conservati su infrastruttura cloud (in genere UE o USA a seconda della configurazione Firebase).
+          Qualora i dati siano trasferiti fuori dallo SEE, adottiamo garanzie previste dal GDPR (es. Clausole Contrattuali Standard)
+          tramite i fornitori che le offrono.
+        </p>
+
+        <h2>7. Periodo di conservazione</h2>
+        <ul>
+          <li><strong>Profilo e post:</strong> fino a cancellazione da parte dell'utente (funzione «Elimina account» in Impostazioni) o del gestore, o fino a cessazione del Servizio.</li>
+          <li><strong>Account Apple / Google:</strong> l'accesso è collegato al provider scelto; puoi uscire o eliminare l'account dall'app. L'eliminazione rimuove profilo, post, media e dati collegati sul nostro backend.</li>
+          <li><strong>Segnalazioni (report):</strong> per il tempo necessario alla moderazione e agli obblighi di legge.</li>
+          <li><strong>Messaggi contatti:</strong> per il tempo necessario a gestire la richiesta, di norma non oltre 24 mesi.</li>
+          <li><strong>Analytics:</strong> secondo i periodi di conservazione configurati su Firebase/Google (in genere in forma aggregata).</li>
+          <li><strong>Log tecnici hosting:</strong> secondo i termini del provider (in genere pochi mesi).</li>
+        </ul>
+
+        <h2>8. Sicurezza</h2>
+        <p>
+          Adottiamo misure tecniche e organizzative adeguate (regole Firestore/Storage, accesso autenticato, HTTPS, limiti su upload).
+          Nessun sistema è invulnerabile: ti invitiamo a non pubblicare dati sensibili o informazioni che mettano in pericolo te o altri.
+        </p>
+
+        <h2>9. Diritti dell'interessato</h2>
+        <p>Hai diritto a:</p>
+        <ul>
+          <li>accesso, rettifica, cancellazione;</li>
+          <li>limitazione del trattamento e opposizione, nei casi previsti;</li>
+          <li>portabilità dei dati forniti, ove applicabile;</li>
+          <li>revocare il consenso (es. notifiche o posizione) dalle impostazioni del dispositivo o dell'app; limitare l'analytics tramite le impostazioni privacy del sistema operativo ove disponibili;</li>
+          <li>eliminare l'account dall'app (Impostazioni → Elimina account), con rimozione dei dati associati salvo obblighi di legge;</li>
+          <li>proporre reclamo al Garante per la protezione dei dati personali (<a href="https://www.garanteprivacy.it" rel="noopener">www.garanteprivacy.it</a>).</li>
+        </ul>
+        <p>
+          Per le richieste scrivi a
+          <a href="mailto:supporto@appinzona.com?subject=Privacy%20%E2%80%94%20InZona">supporto@appinzona.com</a>
+          indicando l'oggetto «Privacy — InZona» e, se possibile, l'UID o i dettagli del profilo.
+        </p>
+
+        <h2>10. Minori</h2>
+        <p>
+          Il Servizio non è destinato a minori di 16 anni. Se ritieni che un minore ci abbia fornito dati
+          senza consenso genitoriale, contattaci per la rimozione.
+        </p>
+
+        <h2>11. Modifiche</h2>
+        <p>
+          Possiamo aggiornare questa informativa. La data in calce indica l'ultima revisione.
+          Per modifiche rilevanti potremo informarti tramite app o sito.
+        </p>
+
+        <nav class="legal-nav-links" aria-label="Collegamenti legali">
+          <a href="./termini-e-condizioni.html">Termini e condizioni →</a>
+          <a href="./">← Torna alla home</a>
+        </nav>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="footer-contact">
+            <div>
+              <h4>Contattaci a</h4>
+              <h4>
+                <a href="mailto:supporto@appinzona.com" target="_blank" rel="noopener">supporto@appinzona.com</a>
+              </h4>
+            </div>
+            <p class="footer-credit">Creato da App In Zona</p>
+          </div>
+
+          <div class="footer-nav-list">
+            <div class="footer-store-badges">
+              <a
+                class="store-btn store-btn--apple"
+                href="https://apps.apple.com/app/skimap-offline-ski-resorts/id6755932390"
+                target="_blank"
+                rel="noopener"
+                aria-label="Scarica su App Store"
+              >
+                <svg class="store-btn__icon" viewBox="0 0 384 512" aria-hidden="true">
+                  <path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 25 223.8 25 272.7c0 38.7 7.2 110.9 45.6 157.9 17.9 24.2 41.5 51.4 71.5 50.8 29.4-.5 40.5-19.1 74.4-19.1 33.8 0 43.8 19.1 74.4 18.8 30.9-.3 52.7-26.8 71.3-51 23.1-32.5 32.5-64 33-65.5-2.9-1.3-64.5-24.7-65.1-98.1zM256.3 85.9c16.3-19.7 27.3-47.1 24.3-74.4-23.6 1-52.2 15.7-69.1 35.5-15.1 17.4-28.3 45.2-24.8 71.9 26.2 2 53.3-13.7 69.6-33.1z"/>
+                </svg>
+                <span class="store-btn__copy">
+                  <span class="store-btn__small">Scarica su</span>
+                  <span class="store-btn__large">App Store</span>
+                </span>
+              </a>
+              <a
+                class="store-btn store-btn--google"
+                href="https://play.google.com/store/apps/details?id=com.thestolenspot.skimap"
+                target="_blank"
+                rel="noopener"
+                aria-label="Scaricala su Google Play"
+              >
+                <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor" d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5Z"/>
+                  <path fill="currentColor" d="M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12Z"/>
+                  <path fill="currentColor" d="M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81Z"/>
+                  <path fill="currentColor" d="M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                </svg>
+                <span class="store-btn__copy">
+                  <span class="store-btn__small">DISPONIBILE SU</span>
+                  <span class="store-btn__large">Google Play</span>
+                </span>
+              </a>
+            </div>
+
+            <nav class="footer-links">
+              <a href="mailto:supporto@appinzona.com" rel="noopener">Contattaci</a>
+              <a href="./termini-e-condizioni.html">Termini e Condizioni</a>
+              <a href="./privacy-policy.html">Informativa sulla Privacy</a>
+            </nav>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <p class="footer-copyright">© 2026 App In Zona. Tutti i diritti riservati.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
