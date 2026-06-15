@@ -442,11 +442,6 @@ body {
     object-position: center bottom;
   }
 
-  .hero-visual-wrap {
-    transform: none !important;
-    will-change: auto;
-  }
-
   .review-section {
     margin-top: 0;
   }

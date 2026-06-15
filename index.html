@@ -669,16 +669,13 @@
       }
 
       function getMaxShift(heroHeight) {
+        if (mobileQuery.matches) {
+          return Math.min(160, Math.round(heroHeight * 0.22));
+        }
         return Math.min(380, Math.round(heroHeight * 0.34));
       }
 
       function updateHeroParallax() {
-        if (mobileQuery.matches) {
-          heroWrap.style.transform = "translate3d(0, 0, 0)";
-          ticking = false;
-          return;
-        }
-
         var scrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
         var rect = heroVisual.getBoundingClientRect();
         var viewportHeight = window.innerHeight;
