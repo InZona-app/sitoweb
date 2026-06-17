@@ -79,7 +79,7 @@ body {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 16px;
 }
 
 .nav-link {
@@ -96,6 +96,23 @@ body {
 .nav-link:hover {
   color: var(--accent);
   text-decoration: underline;
+}
+
+.nav-link.donate-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #fff;
+  background-color: var(--accent);
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.nav-link.donate-btn:hover {
+  color: #fff;
+  background-color: #243f3f;
+  text-decoration: none;
 }
 
 .nav-toggle {
