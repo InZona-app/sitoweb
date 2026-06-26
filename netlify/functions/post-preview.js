@@ -99,7 +99,7 @@ function buildPostPage({ postId, webUrl, post }) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#000000" />
-    <meta name="apple-itunes-app" content="app-id=6765660950, app-argument=${escapeHtml(webUrl)}" />
+    <meta name="apple-itunes-app" content="app-id=0000000000, app-argument=${escapeHtml(webUrl)}" />
     <title>${escapeHtml(title)}</title>
     <meta name="description" content="${escapeHtml(description)}" />
     <meta property="og:site_name" content="InZona" />
@@ -249,7 +249,7 @@ exports.handler = async (event) => {
     };
   }
 
-  const host = event.headers.host || event.headers.Host || 'inzona.netlify.app';
+  const host = event.headers.host || event.headers.Host || 'appinzona.com';
   const webUrl = `https://${host}/post/${postId}`;
 
   let post = null;
