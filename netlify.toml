@@ -10,3 +10,8 @@
   to = "/.netlify/functions/post-preview?id=:id"
   status = 200
   force = true
+
+[[redirects]]
+  from = "/download"
+  to = "/download.html"
+  status = 200
