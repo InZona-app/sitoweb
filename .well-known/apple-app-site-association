@@ -4,8 +4,10 @@
     "details": [
       {
         "appID": "PX49GHL64Y.com.istant.app",
-        "paths": ["/post/*"]
+        "paths": ["/post/*", "/invite", "/invite/*"]
       }
     ]
   }
 }
+
+
