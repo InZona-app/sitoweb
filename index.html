@@ -134,8 +134,9 @@
             <a
               class="store-btn store-btn--google"
               data-framer-name="Button"
-              href="#"
-              data-coming-soon="true"
+              href="https://play.google.com/store/apps/details?id=com.istant.app&pcampaignid=web_share"
+              target="_blank"
+              rel="noopener"
               aria-label="Scaricala su Google Play"
             >
               <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true">
@@ -602,8 +603,9 @@
             </a>
             <a
               class="store-btn store-btn--google"
-              href="#"
-              data-coming-soon="true"
+              href="https://play.google.com/store/apps/details?id=com.istant.app&pcampaignid=web_share"
+              target="_blank"
+              rel="noopener"
               aria-label="Scaricala su Google Play"
             >
               <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true">
@@ -633,27 +635,6 @@
       <p class="footer-copyright">© 2026 App In Zona. Tutti i diritti riservati.</p>
     </div>
   </footer>
-  </div>
-
-  <div
-    class="coming-soon-overlay"
-    id="coming-soon-modal"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="coming-soon-title"
-    aria-hidden="true"
-  >
-    <div class="coming-soon">
-      <button class="coming-soon__close" type="button" data-close aria-label="Chiudi">&times;</button>
-      <div class="coming-soon__icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" width="32" height="32">
-          <path fill="currentColor" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8Zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67Z"/>
-        </svg>
-      </div>
-      <h3 class="coming-soon__title" id="coming-soon-title">Presto in arrivo</h3>
-      <p class="coming-soon__text">L'app InZona per Android sarà disponibile a breve su Google Play. Resta sintonizzato!</p>
-      <button class="coming-soon__btn" type="button" data-close>Ho capito</button>
-    </div>
   </div>
 
   <script>
@@ -758,50 +739,6 @@
       } else if (mobileQuery.addListener) {
         mobileQuery.addListener(onViewportChange);
       }
-    })();
-
-    (function () {
-      var overlay = document.getElementById("coming-soon-modal");
-      var triggers = document.querySelectorAll('[data-coming-soon]');
-
-      if (!overlay || !triggers.length) return;
-
-      var lastFocused = null;
-
-      function openModal(event) {
-        event.preventDefault();
-        lastFocused = document.activeElement;
-        overlay.classList.add("is-open");
-        overlay.setAttribute("aria-hidden", "false");
-        document.body.classList.add("modal-open");
-        var closeBtn = overlay.querySelector(".coming-soon__close");
-        if (closeBtn) closeBtn.focus();
-      }
-
-      function closeModal() {
-        overlay.classList.remove("is-open");
-        overlay.setAttribute("aria-hidden", "true");
-        document.body.classList.remove("modal-open");
-        if (lastFocused && typeof lastFocused.focus === "function") {
-          lastFocused.focus();
-        }
-      }
-
-      triggers.forEach(function (trigger) {
-        trigger.addEventListener("click", openModal);
-      });
-
-      overlay.addEventListener("click", function (event) {
-        if (event.target === overlay || event.target.hasAttribute("data-close")) {
-          closeModal();
-        }
-      });
-
-      document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape" && overlay.classList.contains("is-open")) {
-          closeModal();
-        }
-      });
     })();
   </script>
 </body>
